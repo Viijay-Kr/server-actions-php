@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Insert the data into the database
     // Perform the SQL insert operation
-    $query = "INSERT INTO users (name, email, age) VALUES ('$username', '$email', '$age')";
+    $query = "INSERT INTO users (name, email, age) VALUES ('$name', '$email', '$age')";
     $result = mysqli_query($conn, $query);
 
     // Check if the insert operation was successful
@@ -57,6 +57,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 
 <body class="m-[1rem]">
+    <h2 class="text-center font-bold text-3xl">Server Actions in PHP</h2>
     <div class="flex flex-col gap-[1] items-center">
         <h3 class="border-b p-[1rem] text-center">Create User</h3>
         <form title="Create User" action="" method="POST" class="flex flex-col gap-[0.5rem]">
